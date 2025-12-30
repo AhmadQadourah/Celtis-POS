@@ -1,0 +1,143 @@
+export const messages = {
+  en: {
+    appTitle: 'Celtis POS',
+    appSubtitle: 'frontend-only demo',
+    navSell: 'Sell',
+    navParked: 'Parked',
+    navHistory: 'History',
+    langEnglish: 'English',
+    langArabic: 'العربية',
+
+    productsTitle: 'Products',
+    productsHint: 'Press / to search',
+    searchPlaceholder: 'Search name or SKU…',
+    noMatches: 'No matches. Try a different keyword.',
+
+    currentSaleTitle: 'Current sale',
+    itemsCount: '{count} items',
+    updatedAt: 'Updated {time}',
+    clear: 'Clear',
+    clearConfirm: 'Clear current sale?',
+    clearConfirmMessage: 'This will remove all line items from the current sale.',
+    emptySaleHint: 'Add items to start a sale.',
+    remove: 'Remove',
+    each: 'each',
+    lineTotal: 'Line:',
+
+    subtotal: 'Subtotal',
+    tax: 'Tax (8%)',
+    total: 'Total',
+    park: 'Park',
+    payCash: 'Pay (Cash)',
+    payCard: 'Pay (Card)',
+    parkTip: 'Tip: Parking saves the sale as a draft so you can resume it later.',
+    payConfirm: 'Mark as paid ({method})?',
+    payConfirmMessage: 'Total: {total}',
+    confirm: 'Confirm',
+
+    parkedTitle: 'Parked sales',
+    parkedSubtitle: 'Drafts you can resume at any time',
+    draftsCount: '{count} drafts',
+    noDrafts: 'No parked sales yet. Go to Sell and park a sale.',
+    draft: 'Draft',
+    delete: 'Delete',
+    deleteDraftConfirm: 'Delete this parked sale?',
+    deleteDraftMessage: 'This action cannot be undone.',
+    resume: 'Resume',
+
+    historyTitle: 'Sales history',
+    historySubtitle: 'Paid sales (last {count})',
+    clearData: 'Clear data',
+    clearAllConfirm: 'Clear ALL local data?',
+    clearAllMessage: 'This will delete the active sale, all parked drafts, and sales history. This action cannot be undone.',
+    noPaid: 'No paid sales yet. Complete a sale from Sell.',
+    receiptTitle: 'Receipt',
+    receiptSubtitle: 'Details for the selected sale',
+    selectSale: 'Select a sale to view details.',
+    paid: 'Paid',
+    method: 'Method',
+
+    // UX / safety
+    unsavedLeaveConfirm: 'You have an active sale. Leave this screen?',
+    unsavedLeaveMessage: 'Your current sale will be saved as a draft automatically.',
+
+    // Add-ons
+    addonsTitle: 'Add-ons',
+    addonsSubtitle: 'Optional modifiers for this item',
+    cancel: 'Cancel',
+    addItem: 'Add item',
+  },
+  ar: {
+    appTitle: 'نقطة البيع',
+    appSubtitle: 'عرض واجهة فقط',
+    navSell: 'بيع',
+    navParked: 'معلّق',
+    navHistory: 'السجل',
+    langEnglish: 'English',
+    langArabic: 'العربية',
+
+    productsTitle: 'المنتجات',
+    productsHint: 'اضغط / للبحث',
+    searchPlaceholder: 'ابحث بالاسم أو SKU…',
+    noMatches: 'لا توجد نتائج. جرّب كلمة أخرى.',
+
+    currentSaleTitle: 'البيع الحالي',
+    itemsCount: '{count} عنصر',
+    updatedAt: 'آخر تحديث {time}',
+    clear: 'مسح',
+    clearConfirm: 'مسح البيع الحالي؟',
+    clearConfirmMessage: 'سيتم حذف كل العناصر من البيع الحالي.',
+    emptySaleHint: 'أضف عناصر لبدء بيع.',
+    remove: 'إزالة',
+    each: 'للقطعة',
+    lineTotal: 'الإجمالي:',
+
+    subtotal: 'المجموع',
+    tax: 'الضريبة (8%)',
+    total: 'الإجمالي',
+    park: 'تعليق',
+    payCash: 'دفع (نقداً)',
+    payCard: 'دفع (بطاقة)',
+    parkTip: 'ملاحظة: التعليق يحفظ البيع كمسودة لاستئنافه لاحقاً.',
+    payConfirm: 'تأكيد الدفع ({method})؟',
+    payConfirmMessage: 'الإجمالي: {total}',
+    confirm: 'تأكيد',
+
+    parkedTitle: 'المبيعات المعلّقة',
+    parkedSubtitle: 'مسودات يمكنك استئنافها في أي وقت',
+    draftsCount: '{count} مسودة',
+    noDrafts: 'لا توجد مبيعات معلّقة. اذهب إلى بيع وقم بتعليق بيع.',
+    draft: 'مسودة',
+    delete: 'حذف',
+    deleteDraftConfirm: 'حذف هذه المسودة؟',
+    deleteDraftMessage: 'لا يمكن التراجع عن هذا الإجراء.',
+    resume: 'استئناف',
+
+    historyTitle: 'سجل المبيعات',
+    historySubtitle: 'المبيعات المدفوعة (آخر {count})',
+    clearData: 'مسح البيانات',
+    clearAllConfirm: 'مسح كل البيانات المحلية؟',
+    clearAllMessage: 'سيتم حذف البيع الحالي وجميع المسودات المعلّقة وسجل المبيعات. لا يمكن التراجع عن هذا الإجراء.',
+    noPaid: 'لا توجد مبيعات مدفوعة بعد. أكمل عملية بيع من بيع.',
+    receiptTitle: 'الإيصال',
+    receiptSubtitle: 'تفاصيل البيع المحدد',
+    selectSale: 'اختر بيعاً لعرض التفاصيل.',
+    paid: 'مدفوع',
+    method: 'الطريقة',
+
+    // UX / safety
+    unsavedLeaveConfirm: 'لديك بيع نشط. هل تريد مغادرة هذه الشاشة؟',
+    unsavedLeaveMessage: 'سيتم حفظ البيع الحالي كمسودة تلقائياً.',
+
+    // Add-ons
+    addonsTitle: 'إضافات',
+    addonsSubtitle: 'خيارات إضافية لهذا العنصر',
+    cancel: 'إلغاء',
+    addItem: 'إضافة عنصر',
+  },
+} as const
+
+export type Locale = keyof typeof messages
+export type MessageKey = keyof typeof messages.en
+
+
