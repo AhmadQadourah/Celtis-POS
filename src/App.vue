@@ -48,6 +48,13 @@
               >{{ historyCount }}</Badge
             >
           </RouterLink>
+          <RouterLink
+            to="/admin"
+            class="rounded-lg px-4 py-2 text-slate-700 transition-all hover:bg-slate-100 hover:text-slate-900"
+            active-class="bg-slate-700 text-white hover:bg-slate-800 hover:text-white shadow-md"
+          >
+            Admin
+          </RouterLink>
 
           <div class="mx-2 h-6 w-px bg-slate-200"></div>
           <Button size="sm" variant="secondary" class="font-bold" @click="toggleLocale">

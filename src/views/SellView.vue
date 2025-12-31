@@ -1,6 +1,6 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
-import { catalog } from '../pos/catalog'
+import { useCatalogStore } from '../stores/catalog'
 import { formatMoney } from '../pos/money'
 import { usePosStore } from '../stores/pos'
 import { useI18n } from '../i18n/useI18n'
@@ -11,6 +11,7 @@ import AddonsModal from '../components/AddonsModal.vue'
 import { useToastStore } from '../stores/toast'
 import { useConfirmationStore } from '../stores/confirmation'
 
+const catalog = useCatalogStore()
 const pos = usePosStore()
 const { t, locale } = useI18n()
 const toast = useToastStore()
@@ -23,8 +24,8 @@ const activeProductIndex = ref(-1)
 
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase()
-  if (!q) return catalog
-  return catalog.filter((p) => `${p.name} ${p.sku}`.toLowerCase().includes(q))
+  if (!q) return catalog.products
+  return catalog.products.filter((p) => `${p.name} ${p.sku}`.toLowerCase().includes(q))
 })
 
 const addonsOpen = ref(false)
