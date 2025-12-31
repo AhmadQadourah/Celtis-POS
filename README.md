@@ -37,6 +37,7 @@ npm run preview
 - **Sell**: Active sale interface with product search, cart management, and payment processing
 - **Parked Sales**: View and manage draft sales that can be resumed later
 - **History**: Browse completed sales with detailed receipt views
+- **Admin**: Product catalog management (add, edit, delete products and addons)
 
 ### Key Functionality
 
@@ -46,6 +47,7 @@ npm run preview
 - **Draft Sales**: Park active sales and resume them later
 - **Payment Processing**: Cash and card payment methods
 - **Sales History**: View past transactions with detailed receipts
+- **Product Catalog Management**: Full CRUD operations for products and addons via admin panel
 - **Internationalization**: English and Arabic support with RTL layout
 - **Persistence**: All data saved to localStorage (survives page refresh)
 
@@ -78,14 +80,16 @@ src/
 ├── views/              # Main screen components
 │   ├── SellView.vue    # Active sale interface
 │   ├── ParkedView.vue  # Draft sales management
-│   └── HistoryView.vue # Sales history
+│   ├── HistoryView.vue # Sales history
+│   └── AdminView.vue   # Product catalog management
 ├── stores/              # Pinia stores
 │   ├── pos.ts          # Main POS state and business logic
+│   ├── catalog.ts      # Product catalog state and CRUD operations
 │   ├── confirmation.ts # Confirmation dialog state
 │   └── toast.ts        # Toast notification state
 ├── pos/                 # POS domain logic
 │   ├── types.ts        # TypeScript type definitions
-│   ├── catalog.ts      # Mock product catalog
+│   ├── catalog.ts      # Catalog access utilities
 │   ├── money.ts        # Money formatting utilities
 │   └── storage.ts      # localStorage persistence
 └── i18n/               # Internationalization
@@ -136,14 +140,36 @@ src/
 
 ## 📦 Data Persistence
 
-All data is stored in browser localStorage under the key `celtis_pos_state`:
+All data is stored in browser localStorage:
 
-- Active sale (current draft)
-- Parked/draft sales
-- Sales history (last 50)
-- User's language preference
+- **`celtis.pos.v1`**: POS state (active sale, drafts, history)
+- **`celtis.catalog.v1`**: Product catalog (products and addons)
+- **`celtis.locale`**: User's language preference
 
 Data persists across page refreshes and browser sessions.
+
+## 🔧 Admin Panel
+
+The admin panel (`/admin`) provides full catalog management capabilities:
+
+### Product Management
+- **Add Products**: Create new products with name, SKU, price, and category
+- **Edit Products**: Update product details
+- **Delete Products**: Remove products (with confirmation)
+- **View by Category**: Products are automatically grouped by category
+
+### Addon Management
+- **Add Addons**: Attach modifiers/addons to products (e.g., "Extra shot", "Oat milk")
+- **Edit Addons**: Update addon name and price
+- **Delete Addons**: Remove addons from products
+- **Per-Product**: Each product can have its own set of addons
+
+### Features
+- **Real-time Updates**: Changes immediately reflect in the Sell view
+- **Form Validation**: Required fields and price validation
+- **Reset Option**: Restore default catalog if needed
+- **Persistent Storage**: All changes saved to localStorage
+- **Toast Feedback**: Visual confirmation for all actions
 
 
 ## 📄 License
